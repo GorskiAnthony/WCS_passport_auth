@@ -1,0 +1,17 @@
+{
+  "name": "passport",
+  "version": "1.0.0",
+  "description": "Run scripts",
+  "scripts": {
+    "setup": "npm i && npm --prefix ./client i && npm --prefix ./backend i",
+    "project": "concurrently -n front,back -c cyan,red -t \"HH:mm:ss\" -p \"{name} {time}\" \"npm --prefix ./client run start\" \"npm --prefix ./backend run dev\"",
+    "dev-front": "npm --prefix ./client run start",
+    "dev-back": "npm --prefix ./backend run dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^7.2.1"
+  }
+}
