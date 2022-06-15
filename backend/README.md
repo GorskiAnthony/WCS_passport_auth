@@ -73,28 +73,9 @@ Et une fois sur la page, il faut suivre les étapes suivantes :
 
 ## Création de l'application OAuth
 
-1. Nous allons dans la liste de gauche, choisir "Identifiants"
-![](../_doc/1.png)
+Une petite vidéo pour vous montrer comment créer l'authentification Google :
 
-2. Une fois dessus, nous allons cliquer sur `Créer des identifiants` et ensuite `ID client OAuth`
-![](../_doc/2.png)
-
-3. Il se peut que nous ayons ce type de rendu, alors ce n'est pas grave, nous allons cliquer sur `CONFIGURER L'ÉCRAN DE CONSENTEMENT`
-![](../_doc/3.png)
-
-4. Nous allons choisir `Externes`, pourquoi ? Parce que c'est pas possible de choisir l'autre 😂
-![](../_doc/4.png)
-
-5. Nous allons donner un nom à notre application et un mail pour l'utilisateur, vous pouvez mettre la votre
-![](../_doc/5.1.png)
-
-5.1. Et pour finir, nous allons mettre nos coordonnées de contact
-Et ensuite on clique sur `Enregistrer et continuer`
-![](../_doc/5.2.png)
-
-6. Une petite vidéo pour vous montrer comment ça marche
-
-[![tuto](https://cdn-icons-png.flaticon.com/512/1384/1384060.png)](https://youtu.be/DIh_t-tm4IA "tuto")
+[![tuto](../_doc/bg.png)](https://youtu.be/DIh_t-tm4IA "tuto")
 
 ## On continue
 
