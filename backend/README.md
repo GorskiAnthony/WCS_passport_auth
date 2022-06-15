@@ -190,6 +190,8 @@ router.get(
  * @desc    Redirige l'utilisateur vers la page de connexion après qu'il ait authentifié via Google
  *         et que Google ait retourné les informations de l'utilisateur
  *         dans le callback de la requête
+ *         Le callback a été défini dans la console de Google.
+ *         CF: la vidéo ci-dessus
  *
  */
 router.get(
@@ -211,3 +213,57 @@ router.get("/failure", (req, res) => {
 module.exports = router;
 ```
 
+Aller on test !
+
+Damn, une erreur !
+
+![](../_doc/error.png)
+
+Je vais donc ajouter le middleware `express-session`.
+
+# Final code
+
+```js
+// ./src/app.js
+require("dotenv").config();
+const express = require("express");
+const app = express();
+const logger = require("morgan");
+const session = require("express-session");
+const passport = require("passport");
+
+const config = require("./passport/config");
+const authRouter = require("./routes/authRouter");
+
+/**
+ * j'ajoute le secret de session dans le fichier `.env`
+ */
+const { SECRET_KEY } = process.env;
+
+app.use(logger("dev"));
+
+app.use(
+    session({
+        secret: SECRET_KEY,
+        resave: false,
+        saveUninitialized: false,
+    })
+);
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+app.use("/auth", authRouter);
+
+/**
+ * Nous allons faire une route 404 qui renvoie une erreur 404
+ */
+app.use("/*", (req, res, next) => {
+    const error = new Error("Not found");
+    error.status = 404;
+    next(error);
+});
+
+module.exports = app;
+
+```
