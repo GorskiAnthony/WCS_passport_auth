@@ -1,11 +1,15 @@
+require("dotenv").config();
 const express = require("express");
 const app = express();
 const logger = require("morgan");
-const config = require("./passport/config");
+const passport = require("passport");
 
+const config = require("./passport/config");
 const authRouter = require("./routes/authRouter");
 
 app.use(logger("dev"));
+
+app.use(passport.initialize());
 
 app.use("/auth", authRouter);
 
