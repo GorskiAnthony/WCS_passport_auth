@@ -10,7 +10,7 @@ const Form = ({ register }) => {
               htmlFor="email"
               className="block text-sm font-medium text-gray-700"
             >
-              Email address
+              Email
             </label>
             <div className="mt-1">
               <input
@@ -29,7 +29,7 @@ const Form = ({ register }) => {
               htmlFor="password"
               className="block text-sm font-medium text-gray-700"
             >
-              Password
+              Mot de passe
             </label>
             <div className="mt-1">
               <input
@@ -48,7 +48,7 @@ const Form = ({ register }) => {
               type="submit"
               className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             >
-              {register ? "Register" : "Sign in"}
+              {register ? "S'enregistrer" : "Se connecter"}
             </button>
           </div>
         </form>
@@ -60,7 +60,7 @@ const Form = ({ register }) => {
             </div>
             <div className="relative flex justify-center text-sm">
               <span className="px-2 bg-white text-gray-500">
-                Or continue with
+                Ou continuer avec
               </span>
             </div>
           </div>
