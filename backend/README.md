@@ -75,7 +75,7 @@ Et une fois sur la page, il faut suivre les étapes suivantes :
 
 Une petite vidéo pour vous montrer comment créer l'authentification Google :
 
-[![tuto](../_doc/bg.png)](https://youtu.be/DIh_t-tm4IA "tuto")
+[![tuto](../_doc/bg.png)](https://youtu.be/dXrvLhnRBfc "tuto")
 
 
 ℹ️ Vous vous doutez bien que j'ai supprimé l'application après le tuto 😉
