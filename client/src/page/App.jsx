@@ -1,13 +1,18 @@
 import React from "react";
-import Layout from "./Layout";
+import { Routes, Route } from "react-router-dom";
+
+// Import pages
+import Home from "./Home";
+import Signup from "./Signup";
+import Login from "./Login";
 
 const App = () => {
   return (
-    <Layout>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit illo
-      neque, omnis porro quasi quia sequi sit tempora vel veritatis. Accusamus
-      culpa deserunt est laborum molestiae nemo pariatur quibusdam rerum.
-    </Layout>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/signup" element={<Signup />} />
+      <Route path="/login" element={<Login />} />
+    </Routes>
   );
 };
 
