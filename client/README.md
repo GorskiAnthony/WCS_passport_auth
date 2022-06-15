@@ -6,6 +6,8 @@ Nous avons fait une installation :
 
 ```shell
 npx create-react-app client
+# On ajoute le router :
+npm install react-router-dom
 ```
 
 ## Configuration
