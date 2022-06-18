@@ -1,6 +1,11 @@
 import React from "react";
 
 const Form = ({ register }) => {
+  const PROVIDER_GOOGLE = "http://localhost:5500/auth/google";
+  const handleLoginGoogle = () => {
+    window.open(PROVIDER_GOOGLE, "_self");
+  };
+
   return (
     <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
       <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
@@ -105,9 +110,11 @@ const Form = ({ register }) => {
             </div>
 
             <div>
-              <a
-                href="#!"
-                className="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
+              <button
+                onClick={handleLoginGoogle}
+                className="w-full inline-flex justify-center py-2 px-4 border
+                border-gray-300 rounded-md shadow-sm bg-white text-sm
+                font-medium text-gray-500 hover:bg-gray-50"
               >
                 <span className="sr-only">Sign in with Google</span>
                 <img
@@ -115,7 +122,7 @@ const Form = ({ register }) => {
                   className="w-5 h-5 text-red-400"
                   alt="google"
                 />
-              </a>
+              </button>
             </div>
           </div>
         </div>

@@ -38,4 +38,23 @@ router.get("/failure", (req, res) => {
   res.status(401).json({ message: "Authenticate failed" });
 });
 
+/**
+ * @route   GET auth/success
+ * @desc    Renvoi un message de succès lorsque l'authentification a réussi l'utilisateur
+ */
+router.get("/success", (req, res) => {
+  if (req.user) {
+    res.status(200).json({ message: "Authenticate success", user: req.user });
+  }
+});
+
+router.delete("/logout", (req, res) => {
+  req.logout((err) => {
+    if (err) {
+      res.status(500).json({ message: "Logout failed" });
+    }
+  });
+  res.status(200).json({ message: "Logout success" });
+});
+
 module.exports = router;

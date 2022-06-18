@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import Layout from "./Layout";
+import { UserContext } from "../context/UserContext";
 
 const Home = () => {
   return (

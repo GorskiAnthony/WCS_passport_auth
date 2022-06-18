@@ -1,6 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const app = express();
+const cors = require("cors");
 const logger = require("morgan");
 const session = require("express-session");
 const passport = require("passport");
@@ -17,6 +18,13 @@ app.use(
     secret: SECRET_KEY,
     resave: false,
     saveUninitialized: false,
+  })
+);
+
+app.use(
+  cors({
+    origin: "http://localhost:3000",
+    credentials: true,
   })
 );
 
